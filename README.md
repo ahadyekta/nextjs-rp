@@ -1,3 +1,7 @@
+# Summary
+
+This is an example repo for [this issue](https://github.com/vercel/next.js/discussions/23198) with Next.js when adding i18n to their [with-zones example](https://github.com/vercel/next.js/tree/canary/examples/with-zones).
+
 # Using multiple zones
 
 With Next.js you can use multiple apps as a single app using its [multi-zones feature](https://nextjs.org/docs/advanced-features/multi-zones). This is an example showing how to use it.
