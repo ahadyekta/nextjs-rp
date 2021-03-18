@@ -1,8 +1,9 @@
+const { i18n } = require('./next-i18next.config')
+
 const { BLOG_URL } = process.env
 
-console.log(process.env.BLOG_URL)
-
 module.exports = {
+  i18n,
   rewrites() {
     return [
       {

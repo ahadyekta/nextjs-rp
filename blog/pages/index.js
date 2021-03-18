@@ -1,10 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  }
+})
 
 export default function Blog() {
+  const { t } = useTranslation('common')
+
   return (
     <div>
       <h3>This is our blog</h3>
+      <h4>{t('testTranslation')}</h4>
       <ul>
         <li>
           <Link href="/post/1">

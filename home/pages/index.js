@@ -1,13 +1,24 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 const Header = dynamic(import('../components/Header'))
 
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  }
+})
+
 export default function Home() {
+  const { t } = useTranslation('common')
+
   return (
     <div>
       <Header />
+      <h4>{t('testTranslation')}</h4>
       <p>This is our homepage</p>
       <div>
         <a href="/blog">Blog</a>
