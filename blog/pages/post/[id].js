@@ -16,11 +16,25 @@ export const getStaticPaths = () => {
         params: {
           id: '1',
         },
+        locale: 'de'
+      },
+      {
+        params: {
+          id: '1',
+        },
+        locale: 'en'
       },
       {
         params: {
           id: '2',
         },
+        locale: 'de'
+      },
+      {
+        params: {
+          id: '2',
+        },
+        locale: 'en'
       }
     ],
     fallback: false,
@@ -35,7 +49,7 @@ export default function Post() {
     <div>
       <h3>Post #{router.query.id}</h3>
       <h4>{t('testTranslation')}</h4>
-      <p>Lorem ipsum</p>
+      <p>blog post body</p>
       <Link href="/">
         <a>Back to blog</a>
       </Link>

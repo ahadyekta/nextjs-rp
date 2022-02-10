@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       <h4>{t('testTranslation')}</h4>
       <p>This is our homepage</p>
       <div>

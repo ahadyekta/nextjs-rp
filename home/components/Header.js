@@ -1,6 +1,6 @@
 const Header = () => (
   <div>
-    <h2>The Company</h2>
+    <h2>Heading</h2>
   </div>
 )
 

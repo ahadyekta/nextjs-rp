@@ -1,5 +1,15 @@
 {
-  "name": "with-zones",
-  "private": true,
-  "license": "MIT"
+  "name": "@mui/reverse-proxy",
+  "version": "1.2.0",
+  "description": "reverse proxy",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1"
+  },
+  "author": "Ahad",
+  "license": "ISC"
 }
