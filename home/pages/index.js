@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 const Header = dynamic(import('../components/Header'))
 
@@ -14,25 +15,29 @@ export const getStaticProps = async ({ locale }) => ({
 
 export default function Home() {
   const { t } = useTranslation('common')
+  const router = useRouter()
 
   return (
     <div>
+      <h1>Homepage</h1>
       <h4>{t('testTranslation')}</h4>
-      <p>This is our homepage</p>
+
       <div>
-        <a href="/blog">Blog</a>
+        <a href="/">English Home page</a>
       </div>
       <div>
-        <Link href="/about">
-          <a>About us</a>
-        </Link>
+        <a href="/de">German Home page</a>
       </div>
-      <Image
-        src="/static/nextjs.png"
-        alt="Next.js logo"
-        width={200}
-        height={160}
-      />
+      <div>
+        <a href="/de/blog">German Blog</a>
+      </div>
+      <div>
+        <a href="/en/blog">English Blog</a>
+      </div>
+      <hr />
+      <div>
+        active locale is {router.locale}
+      </div>
     </div>
   )
 }

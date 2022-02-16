@@ -50,9 +50,9 @@ export default function Post() {
       <h3>Post #{router.query.id}</h3>
       <h4>{t('testTranslation')}</h4>
       <p>blog post body</p>
-      <Link href="/">
-        <a>Back to blog</a>
-      </Link>
+      <a href="/">
+        <a>Back to English Home page</a>
+      </a>
     </div>
   )
 }
